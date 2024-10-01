@@ -10,7 +10,7 @@ const ShopContextProvider = (props) => {
         products, currency, delivery_fee
     }
     return (
-        <ShopContext.Provider vaue = {value}>
+        <ShopContext.Provider value = {value}>
             {props.children}
         </ShopContext.Provider>
     )
