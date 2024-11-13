@@ -427,7 +427,7 @@ export const products = [
         price: 5000,
         image: [p_img28],
         category: "Men",
-        subCategory: "footwear",
+        subCategory: "outerwear",
         sizes: ["7", "8", "9", "10", "11"],
         date: 1716645345448,
         bestseller: false
@@ -439,7 +439,7 @@ export const products = [
         price: 1800,
         image: [p_img29],
         category: "Women",
-        subCategory: "footwear",
+        subCategory: "outerwear",
         sizes: ["6", "7", "8", "9"],
         date: 1716646345448,
         bestseller: false
@@ -511,7 +511,7 @@ export const products = [
         price: 4500,
         image: [p_img35],
         category: "Women",
-        subCategory: "footwear",
+        subCategory: "outerwear",
         sizes: ["6", "7", "8", "9"],
         date: 1716652345448,
         bestseller: false
@@ -547,7 +547,7 @@ export const products = [
         price: 3000,
         image: [p_img38],
         category: "Men",
-        subCategory: "footwear",
+        subCategory: "bottomwear",
         sizes: ["8", "9", "10", "11"],
         date: 1716655345448,
         bestseller: false
