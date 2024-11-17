@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
   const { productId } = useParams();
@@ -56,12 +57,38 @@ const Product = () => {
             <p>Select size</p>
             <div className='flex gap-2'>
             {productData.sizes.map((item, index)=>(
-              <button onClick={()=> setSize(item)}>s</button>
+             <button 
+             onClick={() => setSize(item)} 
+             className={`border py-2 px-4 mt-5 bg-gray-100 ${item === size ? 'border-pink-900' : ''}`} 
+             key={index}>
+             {item}
+           </button>
+           
             ))}
             </div>
           </div>
+          <button className='bg-black text-white px-8 py-3 text-sm active:bg-gray-600'>Add to Cart</button>
+          <hr className= 'mt-8 sm:w-4/5'/>
+          <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
+            <p>Original Product</p>
+            <p> Cash on delivery is available </p>
+            <p>Easy return and exchange policy within 5 days </p>
+          </div>
         </div>
       </div>
+      {/*--------------------- Description and review section ---------------------------------------- */}
+      <div className='mt-20'>
+        <div className='flex'>
+          <b className='border px-5 py-3 text-sm'>Description</b>
+          <p className='border px-5 py-3 text-sm'>Reviews (122)</p>
+        </div>
+        <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-400'>
+          <p>we reserve the right to update these terms from time to time in our sole discretion. all changes are effective immediately when we post them, and apply to all access and use of the website and/or all purchases of any good or service thereafter.</p>
+          <p>Sign up! Get the inside scoop on exclusive online and in-store offers, new product alerts, store events and store openings in your area. You can unsubscribe any time.</p>
+        </div>
+      </div>
+      {/*--------------------- Related Products ---------------------------------------- */}
+      <RelatedProducts category = {productData.category} subCategory={productData.subCategory}/>
     </div>
   ): <div className='opacity-0'></div>
 };
