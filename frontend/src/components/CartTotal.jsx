@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title'; // Assuming Title is a reusable component
 
 const CartTotal = () => {
+    
     const { currency, delivery_fee, getCartAmount } = useContext(ShopContext);
 
     // Calculate subtotal and total
@@ -10,7 +11,7 @@ const CartTotal = () => {
     const total = subtotal === 0 ? 0 : subtotal + delivery_fee;
 
     return (
-        <div className="w-full">
+        <div className="w-full bg-[#eeeeee]">
             <div className="text-2xl">
                 <Title text1="CART" text2="TOTAL" />
             </div>
